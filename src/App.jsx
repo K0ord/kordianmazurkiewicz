@@ -10,11 +10,14 @@ function App() {
   const [loadState, updateLoadState] = useState(true); // Corrected typo
 
   useEffect(() => {
+    document.body.classList.add('no-scroll');
     const timer = setTimeout(() => {
       updateLoadState(false); // Corrected typo
+      document.body.classList.remove('no-scroll'); // Remove no-scroll after preloader
     }, 1200);
 
-    return () => clearTimeout(timer);
+    return () => {clearTimeout(timer);
+      document.body.classList.remove('no-scroll');}
   }, []);
 
   return (
