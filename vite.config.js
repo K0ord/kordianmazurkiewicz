@@ -6,4 +6,5 @@ export default defineConfig({
   css: {
     postcss: './postcss.config.js',
   },
+  base: '/kordianmazurkiewicz/',  // Add this line (replace with your actual repo name)
 });
