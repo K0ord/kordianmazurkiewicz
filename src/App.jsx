@@ -1,12 +1,24 @@
 import { useState, useEffect } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
 import './App.css';
 
 import Preloader from "../src/components/Preloader.jsx";
+import Reset_scroll from "../src/components/Reset_scroll.jsx";
+import Nav from "../src/components/Nav.jsx";
+import Foot from "../src/components/Foot.jsx";
+
+
+import About from "../src/components/About/About.jsx"
+import Home from "../src/components/Home/Home.jsx"
+import Experience from "../src/components/Experience/Experience.jsx"
+
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Navigate
+} from "react-router-dom";
 
 function App() {
-  const [count, setCount] = useState(0);
   const [loadState, updateLoadState] = useState(true); // Corrected typo
 
   useEffect(() => {
@@ -14,7 +26,7 @@ function App() {
     const timer = setTimeout(() => {
       updateLoadState(false); // Corrected typo
       document.body.classList.remove('no-scroll'); // Remove no-scroll after preloader
-    }, 1200);
+    }, 2400);
 
     return () => {clearTimeout(timer);
       document.body.classList.remove('no-scroll');}
@@ -22,28 +34,21 @@ function App() {
 
   return (
     <>
-      <Preloader load={loadState} />
-      <div style={{ textAlign: 'center' }} id={loadState ? "disable" : "enable"}></div>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React + Kord</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Router>
+        <Preloader load={loadState} />
+        <div style={{ textAlign: 'center' }} id={loadState ? "disable" : "enable"}>
+
+          <Nav />
+          <Reset_scroll />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/experience" element={<Experience />} />
+            <Route path="*" element={<Navigate to="/"/>} />
+          </Routes>
+          <Foot />
+        </div>
+        </Router>
     </>
   );
 }
