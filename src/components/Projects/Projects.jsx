@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from '../Footer';
 
 const Card = ({ title, subtitle, points }) => {
   return (
@@ -50,21 +51,24 @@ const Projects = () => {
   ];
 
   return (
-    <div className="min-h-screen pt-20 sm:pt-32 pb-8 sm:pb-16 text-gray-800">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6">
-        <h1 className="text-3xl sm:text-4xl font-bold mb-6 sm:mb-8 text-center text-custom-orange">Notable Projects</h1>
-        <div className="space-y-6">
-          {projects.map((project, index) => (
-            <Card 
-              key={index} 
-              title={project.title} 
-              subtitle={project.subtitle} 
-              points={project.points}
-            />
-          ))}
+    <>
+      <div className="min-h-screen pt-20 sm:pt-32 pb-8 sm:pb-16 text-gray-800">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
+          <h1 className="text-3xl sm:text-4xl font-bold mb-6 sm:mb-8 text-center text-custom-orange">Notable Projects</h1>
+          <div className="space-y-6">
+            {projects.map((project, index) => (
+              <Card 
+                key={index} 
+                title={project.title} 
+                subtitle={project.subtitle} 
+                points={project.points}
+              />
+            ))}
+          </div>
         </div>
       </div>
-    </div>
+      <Footer />
+    </>
   );
 };
 
