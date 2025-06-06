@@ -2,17 +2,17 @@ import React from 'react';
 
 const Card = ({ title, subtitle, date, points }) => {
   return (
-    <div className="bg-custom-beige p-6 rounded-lg mb-6 hover:shadow-lg transition-all duration-300 border border-custom-orange/20">
-      <div className="flex justify-between items-start mb-4">
-        <div className="text-left">
-          <h3 className="text-xl font-semibold text-custom-orange">{title}</h3>
-          <h4 className="text-lg text-gray-700">{subtitle}</h4>
+    <div className="bg-custom-beige p-4 sm:p-6 rounded-lg mb-6 hover:shadow-lg transition-all duration-300 border border-custom-orange/20">
+      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-4">
+        <div className="text-left mb-2 sm:mb-0">
+          <h3 className="text-lg sm:text-xl font-semibold text-custom-orange">{title}</h3>
+          <h4 className="text-base sm:text-lg text-gray-700">{subtitle}</h4>
         </div>
         <span className="text-gray-600 text-sm">{date}</span>
       </div>
       <ul className="list-disc list-outside text-gray-700 space-y-2 ml-4">
         {points.map((point, index) => (
-          <li key={index} className="text-sm leading-relaxed text-left">
+          <li key={index} className="text-sm sm:text-base leading-relaxed text-left">
             <span className="pl-2">{point}</span>
           </li>
         ))}
@@ -57,9 +57,9 @@ const Experience = () => {
   ];
 
   return (
-    <div className="min-h-screen pt-32 pb-16 px-4 md:px-8 bg-custom-beige text-gray-800">
-      <div className="max-w-4xl mx-auto">
-        <h1 className="text-4xl font-bold mb-8 text-center text-custom-orange">Professional Experience</h1>
+    <div className="min-h-screen pt-20 sm:pt-32 pb-8 sm:pb-16 text-gray-800">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6">
+        <h1 className="text-3xl sm:text-4xl font-bold mb-6 sm:mb-8 text-center text-custom-orange">Professional Experience</h1>
         <div className="space-y-6">
           {experiences.map((exp, index) => (
             <Card 
