@@ -2,15 +2,23 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #FCFBF4;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
 }
 
 a {
@@ -20,14 +28,6 @@ a {
 }
 a:hover {
   color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
 }
 
 h1 {
@@ -52,6 +52,37 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+/*
+Loader Content Below:
+*/
+#preloader-on {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 999999;
+  background-color: #FCFBF4;
+  background-image: url(assets/gear_loading.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#preloader-off {
+  opacity: 0;
+}
+
+#disable {
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+}
+
+body.no-scroll {
+  overflow: hidden;
 }
 
 @media (prefers-color-scheme: light) {

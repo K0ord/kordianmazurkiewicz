@@ -35,18 +35,22 @@ function App() {
 
   return (
     <>
-      <Router>
+      <Router basename="/kordianmazurkiewicz">
         <Preloader load={loadState} />
-        <div style={{ textAlign: 'center' }} id={loadState ? "disable" : "enable"}>
+        <div className="flex flex-col min-h-screen w-full bg-custom-beige" id={loadState ? "disable" : "enable"}>
           <Nav />
           <Reset_scroll />
-          <Routes>
-            <Route path="/" element={<Navigate to="/about" replace />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/experience" element={<Experience />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="*" element={<Navigate to="/about"/>} />
-          </Routes>
+          <main className="flex-grow">
+            <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+              <Routes>
+                <Route path="/" element={<Navigate to="/about" replace />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/experience" element={<Experience />} />
+                <Route path="/projects" element={<Projects />} />
+                <Route path="*" element={<Navigate to="/about"/>} />
+              </Routes>
+            </div>
+          </main>
           <Foot />
         </div>
       </Router>
