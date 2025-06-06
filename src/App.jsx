@@ -25,7 +25,7 @@ function App() {
     const timer = setTimeout(() => {
       updateLoadState(false);
       document.body.classList.remove('no-scroll');
-    }, 2400);
+    }, 1200);
 
     return () => {
       clearTimeout(timer);
