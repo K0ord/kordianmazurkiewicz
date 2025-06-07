@@ -54,21 +54,21 @@ const TechStack = () => {
   return (
     <div className="mt-12 mb-8">
       <h1 className="text-3xl sm:text-4xl font-bold mb-6 sm:mb-8 text-center text-custom-orange">My Tech Stack</h1>
-      <div className="bg-custom-beige p-4 sm:p-6 rounded-lg mb-6 hover:shadow-lg transition-all duration-300 border border-custom-orange/20">
-        <div className="grid grid-cols-5 gap-6">
+      <div className="bg-custom-beige p-3 sm:p-6 rounded-lg mb-6 hover:shadow-lg transition-all duration-300 border border-custom-orange/20">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 sm:gap-4 md:gap-6">
           {techIcons.map((tech, index) => (
             <div 
               key={index}
-              className="flex flex-col items-center justify-center p-4 transform hover:scale-105 transition-transform duration-300"
+              className="flex flex-col items-center justify-center p-2 sm:p-4 transform hover:scale-105 transition-transform duration-300"
             >
-              <div className="w-16 h-16 mb-2 flex items-center justify-center">
+              <div className="w-12 h-12 sm:w-16 sm:h-16 mb-1 sm:mb-2 flex items-center justify-center">
                 <img 
                   src={tech.src} 
                   alt={tech.name}
                   className="max-w-full max-h-full"
                 />
               </div>
-              <span className="text-gray-600 text-sm text-center">{tech.name}</span>
+              <span className="text-gray-600 text-xs sm:text-sm text-center">{tech.name}</span>
             </div>
           ))}
         </div>
