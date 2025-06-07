@@ -1,5 +1,6 @@
 import React from 'react';
 import Footer from '../Footer';
+import TechStack from '../TechStack/TechStack';
 
 const About = () => {
   return (
@@ -12,6 +13,9 @@ const About = () => {
               Welcome to my portfolio! I'm a passionate software engineer with experience in full-stack development, embedded systems, and innovative technologies. I love tackling complex problems and creating solutions that make a difference.
             </p>
           </div>
+          
+          {/* Tech Stack Section */}
+          <TechStack />
         </div>
       </div>
       <Footer />
