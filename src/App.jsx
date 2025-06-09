@@ -4,7 +4,6 @@ import './App.css';
 import Preloader from "../src/components/Preloader.jsx";
 import Reset_scroll from "../src/components/Reset_scroll.jsx";
 import Nav from "../src/components/Nav.jsx";
-import Foot from "../src/components/Foot.jsx";
 
 import About from "../src/components/About/About.jsx"
 import Experience from "../src/components/Experience/Experience.jsx"
@@ -51,7 +50,6 @@ function App() {
               </Routes>
             </div>
           </main>
-          <Foot />
         </div>
       </Router>
     </>
