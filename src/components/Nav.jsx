@@ -17,7 +17,7 @@ const Nav = () => {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden text-[#f0b14c] hover:text-[#f0b14c] focus:outline-none"
+            className="md:hidden text-[#f0b14c] hover:text-[#f0b14c] focus:outline-none border-0 shadow-none"
           >
             <svg
               className="h-6 w-6"
