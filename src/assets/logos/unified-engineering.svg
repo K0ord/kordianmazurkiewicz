@@ -1,7 +1,11 @@
-<svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="96" height="96" rx="20" fill="#0B2545"/>
-  <path d="M26 32L48 20L70 32V64L48 76L26 64V32Z" stroke="#64FFDA" stroke-width="4"/>
-  <path d="M37 47L48 41L59 47V59L48 65L37 59V47Z" fill="#64FFDA"/>
-  <path d="M48 34V41" stroke="#64FFDA" stroke-width="4" stroke-linecap="round"/>
-  <path d="M48 65V72" stroke="#64FFDA" stroke-width="4" stroke-linecap="round"/>
+<svg width="160" height="160" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="160" height="160" rx="36" fill="white"/>
+  <path d="M80 32L48 56V104L80 128L112 104V56L80 32Z" fill="#0B4A9E"/>
+  <path d="M80 40.9L54.4 60.2V99.8L80 119.1L105.6 99.8V60.2L80 40.9Z" fill="white"/>
+  <path d="M80 49L63 62V98L80 111L97 98V62L80 49Z" fill="#0B4A9E"/>
+  <path d="M80 62L71 69V83.5C71 91.5 75.6 97.5 80 101C84.4 97.5 89 91.5 89 83.5V69L80 62Z" fill="white"/>
+  <path d="M80 53L88 60L80 66L72 60L80 53Z" fill="#0B4A9E"/>
+  <path d="M80 35L86.5 48H73.5L80 35Z" fill="#0B4A9E"/>
+  <path d="M57 125C54.2 125 52 122.8 52 120C52 117.2 54.2 115 57 115H103C105.8 115 108 117.2 108 120C108 122.8 105.8 125 103 125H57Z" fill="#0B4A9E"/>
+  <text x="80" y="148" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="18" font-weight="700" fill="#0B4A9E">UNIFIED ENGINEERING</text>
 </svg>

@@ -7,14 +7,14 @@ import magnaInternationalLogo from '../../assets/logos/magna-international.svg';
 const Card = ({ title, company, location, date, points, tech, logo, logoAlt }) => {
   return (
     <div className="relative pl-6 sm:pl-20">
-      <div className="absolute left-4 top-0 bottom-0 w-px hidden sm:block bg-gradient-to-b from-custom-orange/80 via-custom-orange/30 to-transparent" aria-hidden="true" />
-      <div className="absolute left-2.5 sm:left-4 top-6 hidden sm:flex h-3 w-3 items-center justify-center">
-        <span className="h-3 w-3 rounded-full bg-custom-orange shadow-[0_0_0_6px_rgba(240,177,76,0.2)]" aria-hidden="true" />
+      <div className="absolute left-2 sm:left-4 top-0 bottom-0 w-px hidden sm:block bg-gradient-to-b from-custom-orange/55 via-custom-orange/10 to-transparent" aria-hidden="true" />
+      <div className="absolute left-1.5 sm:left-4 top-6 hidden sm:flex h-3 w-3 items-center justify-center">
+        <span className="h-3 w-3 rounded-full bg-custom-orange shadow-[0_0_0_8px_rgba(240,177,76,0.2)]" aria-hidden="true" />
       </div>
-      <div className="relative overflow-hidden rounded-3xl border border-white/70 bg-white/70 p-6 shadow-xl backdrop-blur transition duration-300 hover:-translate-y-1 hover:shadow-2xl">
+      <div className="relative overflow-hidden rounded-3xl bg-white/90 p-6 shadow-xl ring-1 ring-black/5 backdrop-blur transition duration-300 hover:-translate-y-1 hover:shadow-2xl">
         <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
           <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
-            <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-2xl bg-white/90 p-3 ring-4 ring-white shadow-inner">
+            <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-2xl bg-white p-3 shadow-[inset_0_1px_3px_rgba(15,23,42,0.08)] ring-1 ring-black/5">
               <img src={logo} alt={logoAlt} className="h-full w-full object-contain" loading="lazy" />
             </div>
             <div className="text-left">
@@ -60,7 +60,7 @@ const Experience = () => {
     {
       title: 'Full Stack Software Engineering Co-op',
       company: 'Relay Financial',
-      location: 'Toronto, ON (Remote-Friendly)',
+      location: 'Toronto, ON',
       date: 'Jan 2025 – Apr 2025',
       logo: relayFinancialLogo,
       logoAlt: 'Relay Financial logo',
@@ -75,7 +75,7 @@ const Experience = () => {
     {
       title: 'Software Engineering Assistant',
       company: 'Unified Engineering',
-      location: 'Waterloo, ON',
+      location: 'Remote',
       date: 'Jun 2023 – Aug 2023',
       logo: unifiedEngineeringLogo,
       logoAlt: 'Unified Engineering logo',
@@ -89,7 +89,7 @@ const Experience = () => {
     {
       title: 'Software/Electrical Engineering Intern',
       company: 'Magna International',
-      location: 'Brampton, ON',
+      location: 'Newmarket, ON',
       date: 'Aug 2022 – Dec 2022',
       logo: magnaInternationalLogo,
       logoAlt: 'Magna International logo',
@@ -115,7 +115,7 @@ const Experience = () => {
             </p>
           </div>
           <div className="relative mt-12 space-y-10 sm:space-y-12">
-            <div className="absolute left-7 top-0 bottom-0 hidden w-px bg-gradient-to-b from-custom-orange/60 via-custom-orange/20 to-transparent sm:block" aria-hidden="true" />
+            <div className="absolute left-[1rem] top-0 bottom-0 hidden w-px bg-gradient-to-b from-custom-orange/30 via-custom-orange/10 to-transparent sm:block" aria-hidden="true" />
             {experiences.map((exp, index) => (
               <Card key={index} {...exp} />
             ))}
